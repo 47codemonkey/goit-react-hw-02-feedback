@@ -1,18 +1,12 @@
 import React from 'react';
 import P from 'prop-types';
 
-const Statisctic = ({ label, value, percent }) => {
+const Statisctic = ({ label = 'error', value = 0, percent = false }) => {
   return (
     <li>
       {label}: {value} {percent && <span>%</span>}
     </li>
   );
-};
-
-Statisctic.defaultProps = {
-  label: 'error',
-  value: 0,
-  percent: false,
 };
 
 Statisctic.propTypes = {

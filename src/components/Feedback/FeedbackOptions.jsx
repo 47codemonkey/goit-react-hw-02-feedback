@@ -1,13 +1,11 @@
 import React from 'react';
 import P from 'prop-types';
 
-const FeedbackOptions = ({ option, onLeaveFeedback, name }) => {
-  return (
-    <button name={name} onClick={onLeaveFeedback} type="button">
-      {option}
-    </button>
-  );
-};
+const FeedbackOptions = ({ option, onLeaveFeedback, name }) => (
+  <button name={name} onClick={onLeaveFeedback} type="button">
+    {option}
+  </button>
+);
 
 FeedbackOptions.propTypes = {
   option: P.string.isRequired,

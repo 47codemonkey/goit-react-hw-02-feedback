@@ -21,12 +21,10 @@ class Section extends Component {
 
   addComment = e => {
     const { name } = e.target;
-    this.setState(prev => {
-      return {
-        [name]: prev[name] + 1,
-        total: prev.total + 1,
-      };
-    });
+    this.setState(prev => ({
+      [name]: prev[name] + 1,
+      total: prev.total + 1,
+    }));
   };
 
   render() {
